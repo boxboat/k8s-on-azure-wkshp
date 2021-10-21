@@ -201,7 +201,7 @@ cat pull-secrets.json | jq
 And lastly, push that json file back to your cluster with the following command:
 
 ```bash
-oc set data secret/pull-secret -n openshift-config --from-file=.dockerconfigjson=./pull-secret.json
+oc set data secret/pull-secret -n openshift-config --from-file=.dockerconfigjson=./pull-secrets.json
 ```
 
 After a few moments, you can visit the [Red Had Hybrid Cloud Console](https://console.redhat.com/openshift) and view your cluster and all the telemetry being sent there.
