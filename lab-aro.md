@@ -188,7 +188,7 @@ oc login $apiServer -u kubeadmin -p <kubeadmin password>
 
 Obtain the pull secrets file from your cluster. The following command saves this as a JSON file.
 
-```bash
+```
 oc get secrets pull-secret -n openshift-config -o template='{{index .data ".dockerconfigjson"}}' | base64 -d > pull-secrets.json
 ```
 
