@@ -195,7 +195,7 @@ oc get secrets pull-secret -n openshift-config -o template='{{index .data ".dock
 Open `pull-secrets.txt` that you previously obtained from console.redhat.com and copy the `cloud.openshift.com` object from that file into `pull-secrets.json. Once done, validate your json with the following command:
 
 ```bash
-cat pull-secret.json | jq
+cat pull-secrets.json | jq
 ```
 
 And lastly, push that json file back to your cluster with the following command:
